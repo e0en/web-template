@@ -8,6 +8,16 @@
   --border-color: #999;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #36c;
+    --background-color: black;
+    --title-text-color: #ddd;
+    --body-text-color: #999;
+    --border-color: #666;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -59,6 +69,8 @@ textarea {
   border-radius: var(--border-radius);
   padding: calc(2 * var(--border-radius));
   font-size: var(--font-size);
+  background: var(--background-color);
+  color: var(--body-text-color);
 }
 
 
