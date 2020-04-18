@@ -1,0 +1,70 @@
+:root {
+  --border-radius: 4px;
+  --font-size: 16px;
+  --main-color: #36c;
+  --background-color: white;
+  --title-text-color: black;
+  --body-text-color: #666;
+  --border-color: #999;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+
+  font-size: var(--font-size);
+  color: var(--body-text-color);
+  line-height: 2em;
+  word-break: keep-all;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 16px;
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0;
+  line-height: 1.25em;
+  font-weight: 700;
+  color: var(--title-text-color);
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 175%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+a {
+  color: var(--main-color);
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: calc(2 * var(--border-radius));
+  font-size: var(--font-size);
+}
+
+
+@media (min-width: 600px) {
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}

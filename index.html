@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>웹 디자인 템플릿 만들기</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <main>
+    <h1>웹 디자인 템플릿</h1>
+    <p>개인적으로 사용할 웹 사이트에 일관적으로 적용할 마크업, 스타일을 정의한다.</p>
+    <h2>개발 동기</h2>
+    <p>
+    본업이 웹 개발은 아니지만 취미 혹은 필요로 인해 여러개의 웹 페이지를 만들게 된다.
+    매 작업마다 별개의 스타일시트를 작성하니 중복 작업도 많고 결과물도 만족스럽지 않았다.
+    이 문제를 해결하려고 <a href="https://getbootstrap.com/">bootstrap</a>, <a href="https://bulma.io/">bulma</a> 등의
+    웹 프레임워크를 써 보았지만 다음과 같은 점이 아쉬웠다.</p>
+    <ul>
+      <li>프레임워크에서만 사용하는 HTML tag 클래스 강제</li>
+      <li>원하지 않는 스타일 정의가 너무 많아 무거움</li>
+      <li>네비게이션, 폼에 전용 마크업 강제</li>
+      <li>css variable 대신 scss, less와 같은 CSS 전처리기 사용</li>
+    </ul>
+    <p>
+    위의 내용이 객관적인 단점이라고 하기는 어려우나, 나의 작업 방식과 취향에는 맞지 않았다.
+    웹 디자인에 대한 단편적 지식들을 이 페이지에 코드화하여 향후 작업에 활용하고 싶다.
+    </p>
+
+    <h3>참고자료</h3>
+    <p>다음과 같은 프로젝트에서 영향을 받았다.</p>
+    <ul>
+      <li><a href="https://www.cssbed.com/">cssbed</a> class를 사용하지 않는 css 테마 모음</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">MDN</a>의
+        HTML5 semantic markup 가이드</a></li>
+      <li><a href="https://www.semrush.com/blog/semantic-html5-guide/">semrush</a>의 semantic markup 가이드</a></li>
+      <li><a href="https://hyeonseok.com/docs/html/html5-markup.php">신현석</a> 님의 HTML5 마크업</a></li>
+    </ul>
+
+    <h2>개발 목표</h2>
+
+    <p>
+    위에서 언급한 것처럼 개인 프로젝트에 폭넓게 사용할 수 있는 템플릿을 만드는 것이 목적이다.
+    이상적으로는 디자인 시스템 같은 것을 만들어야 하겠지만, 디자인 문외한이 쉽게 할 수 있는 일은 아닌 것 같기에 그나마
+    현실적으로 목표를 조정했다.
+    </p>
+
+    <p>이 작업에서 만족해야 할 내용을 중요도 순으로 나열해 보았다.</p>
+
+    <ol>
+      <li>Mobile first. 모바일 스타일을 먼저 정의하고 데스크탑 스타일을 추가로 정의한다</li>
+      <li>전용 마크업을 최소화하고 최대한 HTML tag 이름으로 구분한다</li>
+      <li>한글 텍스트에서도 보기 좋은 글꼴을 디폴트로 선정. Noto Sans KR을 쓸 것이다</li>
+      <li>javascript 최소화. 내비게이션/폼에도 되도록이면 쓰지 않을 예정이다</li>
+      <li>CSS variable로 변수를 정의해, 개별 프로젝트에서 커스텀을 하더라도 <code>:root</code> 요소만 수정해도 되도록 한다</li>
+      <li>제대로 마크업하기 힘든 폼 같은 요소는 스타일뿐 아니라 마크업 가이드도 신경써서 작성해 재활용하기 좋게 작업한다</li>
+      <li>다크 모드 지원을 위한 CSS variable 변수 추가 정의</li>
+    </ol>
+
+    <h2>메뉴</h2>
+    <nav></nav>
+
+    <h2>폼 입력 양식</h2>
+    <p>다른 문서 요소와는 달리 좋은 폼을 만들려면 스타일시트뿐만 아니라 마크업도 잘 구성해야 한다. 따라서 다양한
+    마크업에 대응할 수 있도록 스타일시트를 유연하게 정의하고, 이 문서에서는 마크업 예제를 제시해서 다른 프로젝트에서
+    사용할 수 있도록 하자.</p>
+    <form>
+      <textarea></textarea>
+    </form>
+  </main>
+</body>
+</html>
+
