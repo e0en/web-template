@@ -1,6 +1,7 @@
 :root {
-  --border-radius: 4px;
-  --font-size: 16px;
+  --grid-size: 8px;
+  --border-radius: calc(var(--grid-size) / 2);
+  --font-size: calc(var(--grid-size) * 2);
   --main-color: #36c;
   --background-color: white;
   --title-text-color: black;
@@ -62,16 +63,44 @@ a {
   color: var(--main-color);
 }
 
-textarea {
+/* form */
+
+fieldset {
   box-sizing: border-box;
-  width: 100%;
+  border: 0;
+  margin-top: var(--font-size);
+  padding: 0;
+}
+
+label {
+  display: block;
+  color: var(--title-text-color);
+}
+
+input, textarea {
+  box-sizing: border-box;
+  margin: 0;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: calc(2 * var(--border-radius));
+  padding: var(--grid-size);
+  margin-bottom: var(--grid-size);
   font-size: var(--font-size);
-  background: var(--background-color);
   color: var(--body-text-color);
 }
+
+input[type=submit] {
+  color: white;
+  background: var(--main-color);
+}
+
+textarea {
+  width: 100%;
+  background: var(--background-color);
+  min-height: calc(4 * var(--font-size));
+}
+
+
+/* for big screens */
 
 
 @media (min-width: 600px) {

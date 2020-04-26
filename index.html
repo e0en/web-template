@@ -67,7 +67,17 @@
     마크업에 대응할 수 있도록 스타일시트를 유연하게 정의하고, 이 문서에서는 마크업 예제를 제시해서 다른 프로젝트에서
     사용할 수 있도록 하자.</p>
     <form>
-      <textarea></textarea>
+      <fieldset>
+        <label for="short-text">짧은 텍스트 입력</label>
+        <input type="text" value="짧은 텍스트는 input 태그로" />
+        <label for="txt">긴 텍스트 입력</label>
+        <textarea id="txt">textarea 태그를 이용해 긴 텍스트를 입력한다.
+고정폭 글꼴을 사용하면 코드 입력할 때 편하다.</textarea>
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="제출" />
+        <input type="button" value="취소" />
+      </fieldset>
     </form>
   </main>
 </body>
