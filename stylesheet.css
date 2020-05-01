@@ -2,6 +2,9 @@
   --grid-size: 8px;
   --border-radius: calc(var(--grid-size) / 2);
   --font-size: calc(var(--grid-size) * 2);
+  --nav-height: 64px;
+  --content-width: 960px;
+
   --main-color: #36c;
   --background-color: white;
   --title-text-color: black;
@@ -36,7 +39,8 @@ body {
 
 main {
   box-sizing: border-box;
-  padding: 16px;
+  margin-top: var(--nav-height);
+  padding: var(--font-size);
   text-align: left;
 }
 
@@ -61,6 +65,44 @@ h3 {
 
 a {
   color: var(--main-color);
+}
+
+/* navigation */
+nav {
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 0;
+  height: var(--nav-height);
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 0 var(--font-size);
+  line-height: var(--nav-height);
+
+  background-color: var(--background-color);
+
+  /* box-shadow: 0px 0px 10px var(--background-color); */
+  box-shadow: 0px var(--grid-size) var(--grid-size) var(--background-color);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: var(--grid-size);
+}
+
+nav form {
+  min-width: 10em;
+  display: inline-block;
 }
 
 /* form */
@@ -105,7 +147,11 @@ textarea {
 
 @media (min-width: 600px) {
   main {
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: var(--content-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav {
+    max-width: var(--content-width);
   }
 }
