@@ -41,7 +41,8 @@ body {
 
 main {
   box-sizing: border-box;
-  margin-top: var(--nav-height);
+  margin-top: 0;
+  margin-bottom: var(--nav-height);
   padding: var(--font-size);
   text-align: left;
 }
@@ -82,7 +83,7 @@ nav {
   box-sizing: border-box;
   flex-wrap: wrap;
   justify-content: space-between;
-  top: 0;
+  bottom: 0;
   height: var(--nav-height);
   width: 100%;
   left: 50%;
@@ -93,7 +94,7 @@ nav {
 
   background-color: var(--background-color);
 
-  box-shadow: 0px var(--grid-size) var(--grid-size) var(--background-color);
+  box-shadow: 0px calc(-1 * var(--grid-size)) var(--grid-size) var(--background-color);
 }
 
 nav ul {
@@ -195,10 +196,14 @@ textarea {
 @media (min-width: 600px) {
   main {
     max-width: var(--content-width);
+    margin-top: var(--nav-height);
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
   }
   nav {
     max-width: var(--content-width);
+    top: 0;
+    box-shadow: 0px var(--grid-size) var(--grid-size) var(--background-color);
   }
 }
