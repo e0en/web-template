@@ -3,10 +3,11 @@
   --border-radius: calc(var(--grid-size) / 2);
   --font-size: calc(var(--grid-size) * 2);
   --nav-height: 64px;
-  --content-width: 960px;
+  --content-width: 720px;
 
   --main-color: #36c;
   --background-color: white;
+  --dim-background-color: #eee;
   --title-text-color: black;
   --body-text-color: #666;
   --border-color: #999;
@@ -16,6 +17,7 @@
   :root {
     --main-color: #36c;
     --background-color: black;
+    --dim-background-color: #222;
     --title-text-color: #ddd;
     --body-text-color: #999;
     --border-color: #666;
@@ -65,6 +67,12 @@ h3 {
 
 a {
   color: var(--main-color);
+}
+
+code {
+  padding: 4px;
+  background: var(--dim-background-color);
+  border-radius: 4px;
 }
 
 /* navigation */
@@ -140,7 +148,14 @@ input[type=button], input[type=submit], input[type=checkbox] {
 
 input[type=button], input[type=submit] {
   border: 0;
-  margin-right: var(--grid-size);  /* todo: exclude the last element */
+}
+
+input {
+  margin-right: var(--grid-size);
+}
+
+input:last-child {
+  margin-right: 0;
 }
 
 input[type=submit] {

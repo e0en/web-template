@@ -69,7 +69,7 @@
       <li>javascript 최소화. 내비게이션/폼에도 되도록이면 쓰지 않을 예정이다</li>
       <li>CSS variable로 변수를 정의해, 개별 프로젝트에서 커스텀을 하더라도 <code>:root</code> 요소만 수정해도 되도록 한다</li>
       <li>제대로 마크업하기 힘든 폼 같은 요소는 스타일뿐 아니라 마크업 가이드도 신경써서 작성해 재활용하기 좋게 작업한다</li>
-      <li>다크 모드 지원을 위한 CSS variable 변수 추가 정의</li>
+      <li>다크 모드 지원</li>
     </ol>
 
     <h2>네비게이션</h2>
@@ -97,9 +97,15 @@
         <textarea id="txt">textarea 태그를 이용해 긴 텍스트를 입력한다.
 고정폭 글꼴을 사용하면 코드 입력할 때 편하다.</textarea>
       </fieldset>
+      <p>
+        의미가 아닌 형태를 정의하는 <code>br</code> 태그를 썩 좋아하지는 않지만 <code>label</code> 태그와 함께 쓸 때에는 대안이 없다.  <code>label</code> 태그와 <code>input</code> 태그의 상대 위치가 상황에 따라 달라야 하기 때문이다.
+      </p>
       <fieldset>
-        <input type="checkbox" id="checkbox" />
-        <label for="checkbox">브라우저 기본 체크박스 스타일은 일관성이 없어 쓰지 않는다.</label>
+        <input type="checkbox" id="checkbox1" checked />
+        <label for="checkbox1">체크박스는 브라우저 기본 스타일을 그대로 쓴다.</label>
+        <br />
+        <input type="checkbox" id="checkbox2" />
+        <label for="checkbox2">커스텀에는 전용 마크업이 필요하기 때문이다.</label>
       </fieldset>
       <fieldset>
         <input type="submit" value="제출" />
