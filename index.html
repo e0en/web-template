@@ -82,7 +82,7 @@
       <li>내가 쇼핑몰처럼 넓고 깊은 카테고리 네비게이션을 만들 일은 당분간 없을 것 같다.</li>
       <li>검색은 웬만한 웹사이트에는 반드시 필요하다.</li>
       <li>모바일 화면에서는 화면 상단에 손을 뻗을 필요 없게 하고 싶다.</li>
-      <li>데스크탑에서는 화면 좌측을 활용해볼까...</li>
+      <li>데스크탑에서는 화면 좌측을 활용해볼까?</li>
     </ul>
 
     <h2>폼 입력 양식</h2>
@@ -91,11 +91,15 @@
     사용할 수 있도록 하자.</p>
     <form>
       <fieldset>
-        <label for="short-text">짧은 텍스트 입력</label>
+        <label for="short-text">짧은 텍스트 입력</label><br />
         <input type="text" value="짧은 텍스트는 input 태그로" />
-        <label for="txt">긴 텍스트 입력</label>
+        <label for="txt">긴 텍스트 입력</label><br />
         <textarea id="txt">textarea 태그를 이용해 긴 텍스트를 입력한다.
 고정폭 글꼴을 사용하면 코드 입력할 때 편하다.</textarea>
+      </fieldset>
+      <fieldset>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">브라우저 기본 체크박스 스타일은 일관성이 없어 쓰지 않는다.</label>
       </fieldset>
       <fieldset>
         <input type="submit" value="제출" />
@@ -105,4 +109,3 @@
   </main>
 </body>
 </html>
-

@@ -105,6 +105,10 @@ nav form {
   display: inline-block;
 }
 
+nav input {
+  display: inline;
+}
+
 /* form */
 
 fieldset {
@@ -115,11 +119,11 @@ fieldset {
 }
 
 label {
-  display: block;
   color: var(--title-text-color);
 }
 
 input, textarea {
+  display: block;
   box-sizing: border-box;
   margin: 0;
   border: 1px solid var(--border-color);
@@ -128,6 +132,15 @@ input, textarea {
   margin-bottom: var(--grid-size);
   font-size: var(--font-size);
   color: var(--body-text-color);
+}
+
+input[type=button], input[type=submit], input[type=checkbox] {
+  display: inline;
+}
+
+input[type=button], input[type=submit] {
+  border: 0;
+  margin-right: var(--grid-size);  /* todo: exclude the last element */
 }
 
 input[type=submit] {
