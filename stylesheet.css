@@ -18,9 +18,9 @@
     --main-color: #36c;
     --background-color: black;
     --dim-background-color: #222;
-    --title-text-color: #ddd;
+    --title-text-color: #ccc;
     --body-text-color: #999;
-    --border-color: #666;
+    --border-color: #333;
   }
 }
 
@@ -139,6 +139,7 @@ input, textarea {
   padding: var(--grid-size);
   margin-bottom: var(--grid-size);
   font-size: var(--font-size);
+  background-color: var(--background-color);
   color: var(--body-text-color);
 }
 
@@ -156,6 +157,10 @@ input {
 
 input:last-child {
   margin-right: 0;
+}
+
+input[type=button], input[type=submit] {
+  background: var(--dim-background-color);
 }
 
 input[type=submit] {
