@@ -108,6 +108,19 @@ nav li {
   margin-right: var(--grid-size);
 }
 
+nav li:last-child {
+  display: inline-block;
+  margin-right: 0;
+}
+
+nav li a {
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--body-text-color);
+  text-underline-offset: 4px;
+  color: var(--title-text-color);
+  font-weight: bold;
+}
+
 nav form {
   min-width: 10em;
   display: inline-block;
